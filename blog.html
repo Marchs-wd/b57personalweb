@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <style>
+      *,
+      body {
+        margin: 0;
+      }
+    </style>
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/blog.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="">
+        <img
+          src="https://dumbways.id/assets/images/brandred.png"
+          alt="Dumbways"
+        />
+      </div>
+      <ul>
+        <li>
+          <a href="index.html" style="text-decoration: none">Home</a>
+        </li>
+        <li>
+          <a href="blog.html" style="text-decoration: none">Blog</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact Me</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="blog">
+      <div class="blog-form">
+        <div class="form-container">
+          <form onsubmit="addBlog(event)">
+            <h1>Add My Project</h1>
+            <div>
+              <label for="input-blog-title">Title</label>
+              <input id="input-blog-title" />
+            </div>
+            <div>
+              <label for="input-blog-startdate">Start Date</label>
+              <input id="input-blog-startdate" />
+              <label for="input-blog-enddate">End Date</label>
+              <input id="input-blog-enddate" />
+            </div>
+            <div>
+              <label for="input-blog-content">Content</label>
+              <textarea id="input-blog-content"></textarea>
+            </div>
+            <div>
+              <label>Technologies</label>
+              <div style="display: flex; gap: 2; text-align: left">
+                <input type="checkbox" id="nodejs" value="nodejs" />
+                <label>Node Js</label>
+                <input type="checkbox" id="reactjs" value="reactjs" />
+                <label>React Js</label>
+                <input type="checkbox" id="nextjs" value="nextjs" />
+                <label>Next Js</label>
+                <input type="checkbox" id="typescript" value="typescript" />
+                <label>Type Script</label>
+              </div>
+            </div>
+            <div>
+              <label>Upload Image</label>
+              <div class="input-blog-image-group">
+                <label for="input-blog-image">
+                  <p>Attach File</p>
+                  <i class="fa-solid fa-paperclip"></i>
+                </label>
+                <input type="file" id="input-blog-image" hidden />
+              </div>
+            </div>
+            <div class="button-group">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <hr class="line" />
+      <div id="contents" class="blog-list"></div>
+    </div>
+
+    <script src="assets/js/blog.js"></script>
+  </body>
+</html>
